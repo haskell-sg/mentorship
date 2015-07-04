@@ -1,0 +1,2 @@
+# mentorship
+Haskell mentorship sessiosn
