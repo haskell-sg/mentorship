@@ -120,7 +120,7 @@ even :: Integral a =&gt; a -&gt; Bool
 
 ```haskell
 map f [] = []
-map f (element : list) = f element : list
+map f (element : list) =(f element):(map f list)
 ```
 
 --
