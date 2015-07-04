@@ -78,7 +78,8 @@ class: center, middle
 # Everything is a **function** with _one argument_
 
 ```haskell
-double x = x * x
+square x = x * x
+double x = 2 * x
 plus a b = a + b
 plus' a = \b -&gt; a + b
 ```
@@ -119,18 +120,20 @@ even :: Integral a =&gt; a -&gt; Bool
 * Pattern matching
 
 ```haskell
-map f [] = []
-map f (element : list) =(f element):(map f list)
+length []            =             []
+length (head : tail) = (f element):(map f list)
+
+ghci&gt; length [1..10]
 ```
 
 --
 
-* List constructors
 ```haskell
-data [a] =     []  -- ^ end of list
-         | a : [a] -- ^ element, and a list
-```
+map f []            =             []
+map f (head : tail) = (f element):(map f list)
 
+ghci&gt; map double [1..10]
+```
 --
 
 * Shortcut for ranges
@@ -142,6 +145,8 @@ ten = [1..10]
 ---
 #Tasks on lists
 
+# Increment every element of the list
+
 # Compute `sum` of the list
 
 # Compute `product` of the list
@@ -151,6 +156,20 @@ ten = [1..10]
 --
 
 * Hint: `factorial n` is a product of `[1..n]`
+
+---
+# Tasks on list - advanced
+
+## Computed `sum` of the list
+
+## Computed `product` of the list
+
+--
+
+## Notice pattern common for `sum` and `product`
+### Make a function `foldr` that takes two more arguments, so:
+* `foldr (+) 0` is the same as `sum`
+* `foldr (*) 1` is the same as `sum`
 ---
 # See you next time!
 
