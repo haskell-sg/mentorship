@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      img { width: 100%; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Haskell mentorship
+
+## Michał J. Gajda
+
+## Andreas Granström
+
+## Simon Hengel
+
+## Paul Meng
+
+### July 4th 2015
+
+### HackerSpace.SG
+---
+# Indicate your level
+
+# Beginners
+
+## Learn You a Haskell handbook
+
+--
+
+## Step-by-step tutoring
+
+--
+
+# Intermediate
+
+### Tasks with help upon request
+
+--
+
+### Bring your own project
+
+---
+# Prerequisites
+
+# Install [Haskell Platform](http://www.haskell.org/platform)
+
+--
+
+# [Learn You a Haskell](http://learnyouahaskell.com) book
+
+--
+
+# Start `ghci`
+
+--
+
+# Create `Tutorial.hs` in text editor
+---
+# Basics
+
+# Everything is a **function** with _one argument_
+
+```haskell
+double x = x * x
+plus a b = a + b
+plus' a = \b -&gt; a + b
+```
+
+--
+
+# Everything has a **type**
+
+```
+ghci&gt; :load Tutorial.hs
+ghci&gt; :type double
+double :: Num a =&gt; a -&gt; a -&gt; a
+```
+
+--
+
+```haskell
+print (3+4)
+```
+
+---
+# Tasks
+
+# Write function `triple`
+
+# Write `doubleOrTriple` to double even number and 
+
+## use `if` ... `then` ... `else` ...
+
+## use `even` predicate:
+```haskell
+ghci&gt; :type even
+even :: Integral a =&gt; a -&gt; Bool
+```
+---
+# Lists
+
+* Pattern matching
+
+```haskell
+map f [] = []
+map f (element : list) = f element : list
+```
+
+--
+
+* List constructors
+```haskell
+data [a] =     []  -- ^ end of list
+         | a : [a] -- ^ element, and a list
+```
+
+--
+
+* Shortcut for ranges
+
+```haskell
+ten = [1..10]
+```
+
+---
+#Tasks on lists
+
+# Compute `sum` of the list
+
+# Compute `product` of the list
+
+# Compute `factorial`
+
+--
+
+* Hint: `factorial n` is a product of `[1..n]`
+---
+# See you next time!
+
+# Tell your feedback: `tutorial@migamake.com`
+
+# See you on July 21st - live coding session
+
+# See you on next mentorship session!
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    <!--script src="remark/src/remark.js"-->
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
